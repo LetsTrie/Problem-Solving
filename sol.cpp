@@ -128,6 +128,38 @@ bool isValid(string s) {
 // ***************************************************************************************************
 // ***************************************************************************************************
 
+// Math
+const int N = 120, M = 120, F = 30;
+vector<vector<LL>> nCr(N, vector<LL> (M, -1));
+vector<LL> factorial;
+
+LL calculateNcR(LL n, LL r) {
+  if(n < r) return 0;
+  if(n == r || r == 0) return 1;
+  if(nCr[n][r] != -1) return nCr[n][r];
+
+  return nCr[n][r] = calculateNcR(n - 1, r) + calculateNcR(n - 1, r - 1);
+}
+
+void calculateFactorial(int n) {
+  factorial[0] = 1;
+  for(int i = 1; i <= n; i++) factorial[i] = factorial[i - 1] * i;
+}
+
+LL calculateGcd(LL n, LL m) {
+  while(m > 0) {
+    n = n % m; n = n ^ m; m = m ^ n; n = n ^ m;
+  }
+  return n;
+}
+
+LL calculateLcm(LL n, LL m) {
+  return (n * m) / calculateGcd(n, m);
+}
+
+// ***************************************************************************************************
+// ***************************************************************************************************
+
 // Miscellaneous
 /*
 *  Middle of 1 to N is: if (N & 1) then (N + 1) / 2 else (N / 2) or (N / 2) + 1
