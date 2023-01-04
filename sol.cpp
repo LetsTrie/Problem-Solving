@@ -141,6 +141,8 @@ LL calculateNcR(LL n, LL r) {
   return nCr[n][r] = calculateNcR(n - 1, r) + calculateNcR(n - 1, r - 1);
 }
 
+// Formula: nc1+nc2+nc3+nc4+...+ncn = (2^n)-1
+
 void calculateFactorial(int n) {
   factorial[0] = 1;
   for(int i = 1; i <= n; i++) factorial[i] = factorial[i - 1] * i;
