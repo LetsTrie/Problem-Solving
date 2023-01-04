@@ -142,6 +142,8 @@ LL calculateNcR(LL n, LL r) {
 }
 
 // Formula: nc1+nc2+nc3+nc4+...+ncn = (2^n)-1
+// Formula: 1+2+3+...+n = n(n+1)/2
+// Problem: https://leetcode.com/problems/number-of-substrings-with-only-1s/
 
 void calculateFactorial(int n) {
   factorial[0] = 1;
