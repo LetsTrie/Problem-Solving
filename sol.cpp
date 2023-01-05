@@ -161,6 +161,68 @@ LL calculateLcm(LL n, LL m) {
   return (n * m) / calculateGcd(n, m);
 }
 
+
+// ***************************************************************************************************
+// ***************************************************************************************************
+
+// String DS
+// Ascii code: [A-Z, 65-90], [a-z,  97-122], [0-9, 48-57]
+
+// Trie 
+int nNodes = 1, nString = 0, ROOT = 0, nLetters = 122;
+
+vector<vector<int>> edge(MAXN + 1, vector<int>(nLetters + 1));
+vector<int> prefixCount(MAXN + 1);
+vector<int> endNode(MAXN + 1);
+vector<char> printStrs(MAXN + 1);
+
+void initTrie (vector<string> &strs) {
+  for(const string &str: strs) {
+    int parentNode = ROOT;
+    for(const char &ch: str) {
+      int childNode = (int) ch;
+      if(!edge[parentNode][childNode]) edge[parentNode][childNode] = nNodes++;
+      parentNode = edge[parentNode][childNode];
+      prefixCount[parentNode]++;
+    }
+    nString++;
+    endNode[parentNode]++;
+  }
+}
+
+void checkTrie(int node = ROOT, int id = 0) {
+  if(endNode[node]) {
+    string output(printStrs.begin(), printStrs.begin() + id);
+    cout << output << endl;
+  }
+  for(int i = 0; i < nLetters; i++) {
+    if(edge[node][i]) {
+      printStrs[id] = ((char) i);
+      checkTrie(edge[node][i], id + 1);
+    }
+  }
+}
+
+void clearTrie() {
+  for(int i = 0; i < nNodes; i++) {
+    endNode[i] = prefixCount[i] = 0;
+    for(int j = 0; j < nLetters; j++) edge[i][j] = 0;
+  } 
+  nNodes = 1;
+  nString = 0;
+}
+
+string findLongestCommonPrefix(int node = ROOT, int id = 0) {
+  for(int i = 0; i < nLetters; i++) {
+    int childNode = edge[node][i];
+    if(childNode && prefixCount[childNode] == nString) {
+      return ((char) i) + findLongestCommonPrefix(childNode, id + 1);
+    }
+  }
+  return "";
+}
+
+
 // ***************************************************************************************************
 // ***************************************************************************************************
 
