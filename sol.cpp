@@ -165,8 +165,9 @@ LL calculateLcm(LL n, LL m) {
 // ***************************************************************************************************
 // ***************************************************************************************************
 
-// String DS: Trie
+// String DS: Trie [Non Linked-List Solution]
 // 1. https://leetcode.com/problems/longest-common-prefix/
+// 2. https://leetcode.com/problems/lexicographical-numbers/
 
 int nNodes = 1, nString = 0, ROOT = 0, nLetters = 122;
 
@@ -174,6 +175,7 @@ vector<vector<int>> edge(MAXN + 1, vector<int>(nLetters + 1));
 vector<int> prefixCount(MAXN + 1);
 vector<int> endNode(MAXN + 1);
 vector<char> printStrs(MAXN + 1);
+vector<string> lexicoStrs;
 
 void initTrie (vector<string> &strs) {
   for(const string &str: strs) {
@@ -192,7 +194,7 @@ void initTrie (vector<string> &strs) {
 void checkTrie(int node = ROOT, int id = 0) {
   if(endNode[node]) {
     string output(printStrs.begin(), printStrs.begin() + id);
-    cout << output << endl;
+    lexicoStrs.push_back(output);
   }
   for(int i = 0; i < nLetters; i++) {
     if(edge[node][i]) {
@@ -211,16 +213,6 @@ void clearTrie() {
   nString = 0;
 }
 
-string findLongestCommonPrefix(int node = ROOT, int id = 0) {
-  for(int i = 0; i < nLetters; i++) {
-    int childNode = edge[node][i];
-    if(childNode && prefixCount[childNode] == nString) {
-      return ((char) i) + findLongestCommonPrefix(childNode, id + 1);
-    }
-  }
-  return "";
-}
-
 // ***************************************************************************************************
 // ***************************************************************************************************
 
@@ -228,4 +220,12 @@ string findLongestCommonPrefix(int node = ROOT, int id = 0) {
 // 1. Middle of 1 to N is: if (N & 1) then (N + 1) / 2 else (N / 2) or (N / 2) + 1
 // 2. ASCII code: [A-Z, 65-90], [a-z,  97-122], [0-9, 48-57]
 
+string intToStr (int n) {
+  stringstream ss; ss << n; 
+  string str; ss >> str;
+  return str;
+}
 
+int strToInt (string str) {
+  return stoi(str);
+}
