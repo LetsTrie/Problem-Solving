@@ -1,3 +1,13 @@
+/*
+* 1. Binary Search [Basic, ClosestToLeft, ClosestToRight]
+* 2. DP [Fibonacci, BigMod]
+* 3. Stack [Valid Parenthesis]
+* 4. Math [nCr, Factorial, GCD, LCM]
+* 5. String [Trie (LinkedList / Non-LinkedList)]
+* 6. Miscellaneous
+*/
+
+
 #include<bits/stdc++.h>
  
 using namespace std;
