@@ -301,9 +301,9 @@ class SegmentTree {
 public:
 	SegmentTree() {}
 	SegmentTree(vector<int>& vec, int _length) {
-   tree.resize(_length << 2, 0);
-   lazy.resize(_length << 2, 0);
-   build(vec, 1, 0, _length - 1);
+	   tree.resize(_length << 2, 0);
+	   lazy.resize(_length << 2, 0);
+	   build(vec, 1, 0, _length - 1);
 	}
  
 	void build(vector<int>& vec, int pos, int left, int right) {
