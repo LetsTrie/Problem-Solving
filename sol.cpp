@@ -293,7 +293,7 @@ void clearTrie() {
   nString = 0;
 }
 
-// Segment tree with lazy propagation
+// Segment tree (+Lazy propagation)
 class SegmentTree {
   vector<LL> tree;
   vector<LL> lazy;
