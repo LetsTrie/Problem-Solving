@@ -293,7 +293,12 @@ void clearTrie() {
   nString = 0;
 }
 
+// ***************************************************************************************************
+// ***************************************************************************************************
+
 // Segment tree (+Lazy propagation)
+// Problem 1: https://codeforces.com/edu/course/2/lesson/4/1/practice/contest/273169/problem/A
+
 class SegmentTree {
   vector<LL> tree;
   vector<LL> lazy;
