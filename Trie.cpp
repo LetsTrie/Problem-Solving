@@ -3,6 +3,7 @@
 // Problem: 2 - https://leetcode.com/problems/lexicographical-numbers/
 // Problem: 3 - https://leetcode.com/problems/implement-trie-prefix-tree/
 // Problem: 4 - https://leetcode.com/problems/search-suggestions-system/
+// Problem: 5 - https://www.hackerrank.com/challenges/one-month-preparation-kit-sparse-arrays/problem
 
 // ******************************************************
 //             Linked-list based solution
