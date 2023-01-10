@@ -65,7 +65,7 @@ public:
       for(int i = 0; i < nLetters; i++) {
         if(node->next[i] != NULL) {
           cur += ASCIItoStr(i);
-          _getLexicalOrder(node->next[i], cur, res);
+          _getLexicalOrderList(node->next[i], cur, res);
           cur.pop_back();
         }
       }
