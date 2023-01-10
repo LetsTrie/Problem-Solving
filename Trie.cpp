@@ -21,6 +21,7 @@ class TrieNode {
     int serial = 0;
     int prefixCount = 0;
     bool isEndOne = false;
+    int occurance = 0;
 
     TrieNode(int _x = 0) : serial(_x) {}
 };
@@ -45,7 +46,9 @@ public:
       }
       nString++;
       p->isEndOne=true;
+      p->occurance++;
     }
+  
    void solve () {
     // write your code here...
    }
