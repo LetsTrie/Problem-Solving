@@ -41,3 +41,7 @@ int main() {
 
 // SegmentTree* segmentTree = new SegmentTree(vec, N);
 // segmentTree -> build(vec, 1, 0, N - 1);
+
+// priority_queue<int> max_q; max_q.pop(); max_q.top(); max_q.empty();
+// priority_queue<int, vector<int>, greater<int>> min_q;
+    
