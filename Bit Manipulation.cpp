@@ -19,3 +19,18 @@ int count_bits (int n) {
 bool is_power_of_two(int x) {
     return x && (!(x & (x - 1)));
 }
+
+// n & (n-1) == 0 [power of two]
+
+// n = n & (n-1) [Removes last 1 everytime. Can be useful for finding "number of 1" in n.]
+
+// __builtin_popcount(n) - number of 1 in "n".. __builtin_popcount(4) == 1
+// for long (__builtin_popcountl(x)) and for long long (__builtin_popcountll(x))
+// power of two
+
+// __builtin_parity(n) - if "number of 1" is even, return 0 otherwise 1
+
+// __builtin_clz(n) - #leading_zero
+
+// __builtin_ctz(x) - #trailing_zero
+// Problem: https://leetcode.com/problems/power-of-four
