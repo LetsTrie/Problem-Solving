@@ -1,0 +1,12 @@
+Some selective good problems
+----------------------------
+
+27 January 2022
+===============
+1) https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/
+2) https://leetcode.com/problems/number-of-good-pairs
+3) https://leetcode.com/problems/find-the-pivot-integer
+4) https://leetcode.com/problems/number-of-common-factors
+5) https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits
+
+Pending: Leetcode (1252, 1266, 1588, 1863)

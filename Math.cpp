@@ -10,16 +10,19 @@ LL _nCr(LL n, LL r) {
   return nCr[n][r] = _nCr(n - 1, r) + _nCr(n - 1, r - 1);
 }
 
+// nCr = (first "r" values of "n!") / (r!)
+// nC2 = (n * (n - 1)) / 2
+// nC3 = (n * (n - 1) * (n - 2)) / (3 * 2 * 1) 
+
 void _factorial(int n) {
   fact[0] = 1;
   for(int i = 1; i <= n; i++) fact[i] = fact[i - 1] * i;
 }
 
-LL _gcd(LL n, LL m) {
-  while(m > 0) {
-    n = n % m; n = n ^ m; m = m ^ n; n = n ^ m;
-  }
-  return n;
+// https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/
+typedef long long LL;
+LL _gcd(LL a, LL b) {
+    return b ? gcd(b, a % b) : a;
 }
 
 LL _lcm(LL n, LL m) {
