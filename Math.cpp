@@ -19,8 +19,6 @@ void _factorial(int n) {
   for(int i = 1; i <= n; i++) fact[i] = fact[i - 1] * i;
 }
 
-// https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/
-typedef long long LL;
 LL _gcd(LL a, LL b) {
     return b ? gcd(b, a % b) : a;
 }
@@ -35,7 +33,15 @@ int digitSum(int n) {
     return sum; 
 }
 
+int _fib(int n) {
+  if (n <= 1) return n;
+  if (fib[n] != -1) return fib[n];
+  fib[n] = _fib(n - 1) + _fib(n - 2);
+  return fib[n];
+}
+
 // Formula: nc1+nc2+nc3+nc4+...+ncn = (2^n)-1
 // Formula: 1+2+3+...+n = n(n+1)/2
 // Problem: https://leetcode.com/problems/number-of-substrings-with-only-1s/
 // Problem: https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/
+// https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/
