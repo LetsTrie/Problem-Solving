@@ -17,3 +17,6 @@ for(int i = 0; i < len / 2; i++) {
 
 // 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
 // 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.
+
+// Pattern finding problems
+// 1. https://leetcode.com/problems/xor-operation-in-an-array/

@@ -26,6 +26,13 @@ LL _lcm(LL n, LL m) {
   return (n * m) / _gcd(n, m);
 }
 
+int digitSum(int n) {
+    int sum = 0;
+    while(n) sum += (n % 10), n /= 10;
+    return sum; 
+}
+
 // Formula: nc1+nc2+nc3+nc4+...+ncn = (2^n)-1
 // Formula: 1+2+3+...+n = n(n+1)/2
 // Problem: https://leetcode.com/problems/number-of-substrings-with-only-1s/
+// Problem: https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/
