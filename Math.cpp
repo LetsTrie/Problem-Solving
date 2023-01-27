@@ -32,6 +32,11 @@ int digitSum(int n) {
     while(n) sum += (n % 10), n /= 10;
     return sum; 
 }
+// digitSum of 1 digit will be max (9x1)
+// digitSum of 2 digit will be max (9x2)
+// digitSum of 3 digit will be max (9x3)
+// digitSum of 4 digit will be max (9x4)
+// digitSum of 5 digit will be max (9x5)
 
 int _fib(int n) {
   if (n <= 1) return n;
@@ -45,3 +50,12 @@ int _fib(int n) {
 // Problem: https://leetcode.com/problems/number-of-substrings-with-only-1s/
 // Problem: https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/
 // https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/
+
+int convert_decimal_to_baseK(int dec, int k) {
+  int converted = 0;
+  while(dec > 0) {
+    converted = (converted * 10) + (dec % k);
+    dec /= k;
+  }
+  return converted;
+}

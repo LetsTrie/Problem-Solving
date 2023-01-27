@@ -1,6 +1,13 @@
 Some selective good problems
 ----------------------------
 
+28 January 2022
+===============
+1) https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position/
+2) https://leetcode.com/problems/a-number-after-a-double-reversal
+3) https://leetcode.com/problems/sum-of-digits-in-base-k
+4) https://leetcode.com/problems/determine-color-of-a-chessboard-square/
+
 27 January 2022
 ===============
 1) https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/
