@@ -16,4 +16,8 @@ Some selective good problems
 4) https://leetcode.com/problems/number-of-common-factors
 5) https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits
 
+28 January 2022
+===============
+1) https://leetcode.com/problems/squares-of-a-sorted-array
+
 Pending: Leetcode (1252, 1266, 1588, 1863)

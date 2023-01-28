@@ -59,3 +59,6 @@ int convert_decimal_to_baseK(int dec, int k) {
   }
   return converted;
 }
+
+// Avoid using sqrt, do calculation with squaring
+// https://leetcode.com/problems/count-square-sum-triples
