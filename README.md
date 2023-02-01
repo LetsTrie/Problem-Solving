@@ -18,6 +18,14 @@
 - [3Sum](https://leetcode.com/problems/3sum/)
 - [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
 - [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+- [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/solutions/1164542/js-python-java-c-easy-two-pointer-solution-w-explanation/)
+- [Subarray Division 1](https://www.hackerrank.com/challenges/one-month-preparation-kit-the-birthday-bar/problem)
+- [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array)
+
+## **Ad Hoc**
+
+- [Drawing Book](https://www.hackerrank.com/challenges/one-month-preparation-kit-drawing-book/problem/)
+- [Max Min](https://www.hackerrank.com/challenges/one-month-preparation-kit-angry-children/problem/)
 
 ## **Stack**
 

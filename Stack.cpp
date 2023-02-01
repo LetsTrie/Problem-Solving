@@ -1,6 +1,4 @@
-// Use-of: Stack 
-// Problem 1. https://leetcode.com/problems/valid-parentheses/
-
+// Valid Parentheses: https://leetcode.com/problems/valid-parentheses/
 bool isValid(string s) {
   stack <char> parenthesis;
   for (auto const & ch: s) {
